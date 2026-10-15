@@ -1,0 +1,18 @@
+# Angular generated files
+SimpleEmployeeUI/node_modules/
+SimpleEmployeeUI/.angular/
+SimpleEmployeeUI/dist/
+
+# .NET generated files
+**/bin/
+**/obj/
+**/.vs/
+**/*.csproj.user
+**/*.suo
+
+# Private database configuration
+SimpleEmployeeAPI/SimpleEmployeeAPI/appsettings.json
+SimpleEmployeeAPI/SimpleEmployeeAPI/appsettings.Development.json
+
+# Logs
+**/*.log

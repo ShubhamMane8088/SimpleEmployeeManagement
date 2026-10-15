@@ -1,0 +1,349 @@
+
+/* Step 2: Global sizing */
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page background */
+.employee-page {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #f1f5f9;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.page-header h1 {
+  color: #1e3a8a;
+  font-size: clamp(22px, 3vw, 30px);
+  overflow-wrap: anywhere;
+}
+
+.page-header p,
+.table-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.employee-count {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 20px;
+  background: #eff6ff;
+  border-radius: 10px;
+  color: #1d4ed8;
+}
+
+.employee-count strong {
+  font-size: 26px;
+}
+
+
+/* Form card */
+.form-card,
+.table-card {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.form-card h2,
+.table-header h2 {
+  color: #1e293b;
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.form-card h2 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Responsive form grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.form-field label {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Form button area */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 22px;
+}
+
+
+
+/* Shared button design */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Add and Update */
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+/* Edit */
+.btn-edit {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.btn-edit:hover {
+  background: #bfdbfe;
+}
+
+/* Delete */
+.btn-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* Success and error messages */
+.success-message,
+.error-message {
+  padding: 12px 14px;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.success-message {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.error-message {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+
+/* Table header section */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
+.table-header h2 {
+  padding-bottom: 8px;
+}
+
+/* Horizontal scrolling on small screens */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+  background: #ffffff;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th {
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+th,
+td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 13px;
+  color: #475569;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+.employee-name {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.department-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  font-size: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+}
+
+
+/* Tablets and mobile screens */
+@media (max-width: 700px) {
+  .employee-page {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .page-header,
+  .form-card,
+  .table-card {
+    padding: 16px;
+  }
+
+  .page-header {
+    align-items: flex-start;
+  }
+
+  .employee-count {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-card h2,
+  .table-header h2 {
+    font-size: 18px;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+  .employee-page {
+    padding: 8px;
+  }
+
+  .page-header,
+  .form-card,
+  .table-card {
+    padding: 12px;
+  }
+
+  .page-header h1 {
+    font-size: 21px;
+  }
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.form-field input.invalid-input {
+  border: 1px solid #dc2626 !important;
+}
+
+.form-field input.valid-input {
+  border: 1px solid #16a34a !important;
+}
